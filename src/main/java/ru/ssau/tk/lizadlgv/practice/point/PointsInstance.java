@@ -13,5 +13,7 @@ public class PointsInstance {
         System.out.println("Divide = (" + Points.divide(firstPoint, secondPoint).x + ", " + Points.divide(firstPoint, secondPoint).y + ", " + Points.divide(firstPoint, secondPoint).z + ")");
 
         System.out.println("Multiplication firstPoint by number 5 = (" + Points.enlarge(firstPoint, 5).x + ", " + Points.enlarge(firstPoint, 5).y + ", " + Points.enlarge(firstPoint, 5).z + ")");
+
+        System.out.println("Length of radius vector = " + Points.length(firstPoint));
     }
 }
