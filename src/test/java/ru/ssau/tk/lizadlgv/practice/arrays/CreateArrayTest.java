@@ -32,4 +32,11 @@ public class CreateArrayTest {
         assertEquals(CreateArray.generateFlippedEvenNumbers(1), new int[]{2});
         assertEquals(CreateArray.generateFlippedEvenNumbers(5), new int[]{10, 8, 6, 4, 2});
     }
+
+    @Test
+    public void testGenerateFibonacci() {
+        assertEquals(CreateArray.generateFibonacci(2), new int[]{1, 1});
+        assertEquals(CreateArray.generateFibonacci(1), new int[]{1});
+        assertEquals(CreateArray.generateFibonacci(5), new int[]{1, 1, 2, 3, 5});
+    }
 }
