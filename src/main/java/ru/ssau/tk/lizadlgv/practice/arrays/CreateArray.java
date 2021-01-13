@@ -89,4 +89,13 @@ public class CreateArray {
         }
         return array;
     }
+
+    static double[] getArithmeticProgression(int n, double first, double step) {
+        double[] array = new double[n];
+        array[0] = first;
+        for (int i = 1; i < n; i++) {
+            array[i] = array[i - 1] + step;
+        }
+        return array;
+    }
 }
