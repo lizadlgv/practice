@@ -11,4 +11,11 @@ public class CreateArrayTest {
         assertEquals(CreateArray.createArray(10), new int[10]);
         assertEquals(CreateArray.createArray(1), new int[1]);
     }
+
+    @Test
+    public void testGenerateOnesArray() {
+        assertEquals(CreateArray.generateOnesArray(2), new int[]{2, 2});
+        assertEquals(CreateArray.generateOnesArray(1), new int[]{2});
+        assertEquals(CreateArray.generateOnesArray(5), new int[]{2, 1, 1, 1, 2});
+    }
 }
