@@ -1,5 +1,6 @@
 package ru.ssau.tk.lizadlgv.practice.person;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -63,5 +64,15 @@ public class PersonTest {
         assertEquals(sixthObj.getGender(), Gender.FEMALE);
         assertNull(fourthObj.getGender());
         assertEquals(thirdObj.getGender(), Gender.FEMALE);
+    }
+
+    @Test
+    public void testException() {
+        Person person = new Person("Uri", "West");
+        Person person2 = new Person(null, null);
+        assertEquals(secondObj.exceptionPerson(secondObj), "Scott Pilgrim");
+        assertEquals(person.exceptionPerson(person), "Uri West");
+
+        Assert.assertThrows(NullPointerException.class, () -> person2.exceptionPerson(person2));
     }
 }

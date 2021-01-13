@@ -66,4 +66,17 @@ public class Person {
     public Gender getGender() {
         return gender;
     }
+
+    public String exceptionPerson(Person person) {
+        if (person.getFirstName() == null || person.getLastName() == null) {
+            throw new NullPointerException();
+        } else {
+            return person.toString();
+        }
+    }
+
+    @Override
+    public String toString() {
+        return firstName + " " + lastName;
+    }
 }
