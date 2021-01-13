@@ -39,4 +39,11 @@ public class CreateArrayTest {
         assertEquals(CreateArray.generateFibonacci(1), new int[]{1});
         assertEquals(CreateArray.generateFibonacci(5), new int[]{1, 1, 2, 3, 5});
     }
+
+    @Test
+    public void testGenerateSqrIndex() {
+        assertEquals(CreateArray.generatePowIndex(2), new int[]{0, 1});
+        assertEquals(CreateArray.generatePowIndex(1), new int[]{0});
+        assertEquals(CreateArray.generatePowIndex(5), new int[]{0, 1, 4, 9, 16});
+    }
 }
