@@ -98,4 +98,13 @@ public class CreateArray {
         }
         return array;
     }
+
+    static double[] getGeometricProgression(int n, double first, double denominator) {
+        double[] array = new double[n];
+        array[0] = first;
+        for (int i = 1; i < n; i++) {
+            array[i] = array[i - 1] * denominator;
+        }
+        return array;
+    }
 }

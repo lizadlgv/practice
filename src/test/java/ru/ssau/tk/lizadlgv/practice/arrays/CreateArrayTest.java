@@ -67,4 +67,11 @@ public class CreateArrayTest {
         assertEquals(CreateArray.getArithmeticProgression(5, -1, 2), new double[]{-1, 1, 3, 5, 7});
         assertEquals(CreateArray.getArithmeticProgression(3, 0, 4), new double[]{0, 4, 8});
     }
+
+    @Test
+    public void testGetGeometricProgression() {
+        assertEquals(CreateArray.getGeometricProgression(5, 2, 2), new double[]{2, 4, 8, 16, 32});
+        assertEquals(CreateArray.getGeometricProgression(2, 1, 5), new double[]{1, 5});
+        assertEquals(CreateArray.getGeometricProgression(3, 400, 0.5), new double[]{400, 200, 100});
+    }
 }
