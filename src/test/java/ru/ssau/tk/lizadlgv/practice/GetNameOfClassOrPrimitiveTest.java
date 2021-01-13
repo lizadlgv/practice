@@ -18,7 +18,7 @@ public class GetNameOfClassOrPrimitiveTest {
         printType(false);
         printType(new Person());
         printType(new Integer(1));
-        printType(new String());
+        printType("");
         printType(null);
     }
 }
