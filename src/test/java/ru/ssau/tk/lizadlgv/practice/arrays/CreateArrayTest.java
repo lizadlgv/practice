@@ -49,9 +49,15 @@ public class CreateArrayTest {
 
     @Test
     public void testSolveQuadraticEquation() {
-        assertEquals(CreateArray.solveQuadraticEquation(0,2,-4),new double[]{2});
-        assertEquals(CreateArray.solveQuadraticEquation(10,200,1654),new double[]{});
-        assertEquals(CreateArray.solveQuadraticEquation(1,-2,1),new double[]{1});
-        assertEquals(CreateArray.solveQuadraticEquation(1,0,-9),new double[]{3,-3});
+        assertEquals(CreateArray.solveQuadraticEquation(0, 2, -4), new double[]{2});
+        assertEquals(CreateArray.solveQuadraticEquation(10, 200, 1654), new double[]{});
+        assertEquals(CreateArray.solveQuadraticEquation(1, -2, 1), new double[]{1});
+        assertEquals(CreateArray.solveQuadraticEquation(1, 0, -9), new double[]{3, -3});
+    }
+
+    @Test
+    public void testGetWithoutMultiplesOfThree() {
+        assertEquals(CreateArray.getWithoutMultiplesOfThree(1), new int[]{1});
+        assertEquals(CreateArray.getWithoutMultiplesOfThree(6), new int[]{1, 2, 4, 5, 7, 8});
     }
 }
