@@ -25,4 +25,11 @@ public class CreateArrayTest {
         assertEquals(CreateArray.generateOddNumbers(1), new int[]{1});
         assertEquals(CreateArray.generateOddNumbers(5), new int[]{1, 3, 5, 7, 9});
     }
+
+    @Test
+    public void testGenerateEvenNumbers() {
+        assertEquals(CreateArray.generateFlippedEvenNumbers(2), new int[]{4, 2});
+        assertEquals(CreateArray.generateFlippedEvenNumbers(1), new int[]{2});
+        assertEquals(CreateArray.generateFlippedEvenNumbers(5), new int[]{10, 8, 6, 4, 2});
+    }
 }
