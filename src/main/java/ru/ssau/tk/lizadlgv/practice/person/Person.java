@@ -1,6 +1,9 @@
 package ru.ssau.tk.lizadlgv.practice.person;
 
-public class Person {
+import java.io.Serializable;
+
+public class Person implements Serializable {
+    private static final long serialVersionUID = 2777664376605685008L;
     private String firstName;
     private String lastName;
     private int passportId;
