@@ -160,4 +160,17 @@ public class CreateArrayTest {
         assertEquals(CreateArray.getIndexOfNumber(array, 8), 2);
         assertEquals(CreateArray.getIndexOfNumber(array, 10), -1);
     }
+
+    @Test
+    public void testExchangedMaxAndMin() {
+        int[] array1 = {1, 2, 3, 4, 5, 6};
+        CreateArray.exchangedMaxAndMin(array1);
+        assertEquals(array1, new int[]{6, 2, 3, 4, 5, 1});
+        int[] array2 = {5};
+        CreateArray.exchangedMaxAndMin(array2);
+        assertEquals(array2, new int[]{5});
+        int[] array3 = {0, -10, 2, 0, 7};
+        CreateArray.exchangedMaxAndMin(array3);
+        assertEquals(array3, new int[]{0, 7, 2, 0, -10});
+    }
 }
