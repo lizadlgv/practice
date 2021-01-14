@@ -215,4 +215,10 @@ public class CreateArrayTest {
         assertEquals(CreateArray.intToLong(CreateArray.longToInt(65L)), 65L);
         assertEquals(CreateArray.longToInt(CreateArray.intToLong(new int[]{1615, 5})), new int[]{1615, 5});
     }
+
+    @Test
+    public void testGetNaturalArrayWithIndex() {
+        assertEquals(CreateArray.getNaturalArrayWithIndex(5, 3), new int[]{3, 4, 5, 1, 2});
+        assertEquals(CreateArray.getNaturalArrayWithIndex(6, 6), new int[]{6, 1, 2, 3, 4, 5});
+    }
 }

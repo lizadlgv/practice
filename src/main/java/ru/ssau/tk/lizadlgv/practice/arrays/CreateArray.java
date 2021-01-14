@@ -287,4 +287,20 @@ public class CreateArray {
     static long intToLong(int[] number) {
         return ((long) number[0] << 32) | ((long) number[1] & 4294967295L);
     }
+
+    public static int[] getNaturalArrayWithIndex(int n, int index) {
+        int[] array = new int[n];
+        int j = 0;
+        int h = 1;
+        for (int i = 0; i < n; i++) {
+            if (index + j <= n) {
+                array[i] = index + j;
+            } else {
+                array[i] = h;
+                h++;
+            }
+            j++;
+        }
+        return array;
+    }
 }
