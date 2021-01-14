@@ -197,4 +197,10 @@ public class CreateArrayTest {
         assertEquals(arrayBitNot[0], 254);
         assertEquals(arrayBitNot[1], 32);
     }
+
+    @Test
+    public void testGetPairSum() {
+        assertEquals(CreateArray.getPairSum(new int[]{10, 4, 8, 2, 9}), new int[]{14, 10, 9});
+        assertEquals(CreateArray.getPairSum(new int[]{10, 4, 8, 2, 9, 1, 2, 5}), new int[]{14, 10, 10, 7});
+    }
 }

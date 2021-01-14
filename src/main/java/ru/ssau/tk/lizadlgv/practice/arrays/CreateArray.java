@@ -264,4 +264,12 @@ public class CreateArray {
         }
         return arrayBitNot;
     }
+
+    static int[] getPairSum(int[] array) {
+        int[] arrayPairSum = new int[array.length / 2 + (array.length % 2 == 0 ? 0 : 1)];
+        for (int i = 0; i < arrayPairSum.length; i++) {
+            arrayPairSum[i] = array[2 * i] + (2 * i + 1 < array.length ? array[2 * i + 1] : 0);
+        }
+        return arrayPairSum;
+    }
 }
