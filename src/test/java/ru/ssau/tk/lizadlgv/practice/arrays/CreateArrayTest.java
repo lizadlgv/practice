@@ -2,7 +2,7 @@ package ru.ssau.tk.lizadlgv.practice.arrays;
 
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.*;
 
 public class CreateArrayTest {
     @Test
@@ -92,5 +92,13 @@ public class CreateArrayTest {
         int[] array = {0, 564, -1159};
         CreateArray.changeSign(array);
         assertEquals(array, new int[]{0, -564, 1159});
+    }
+
+    @Test
+    public void testFindNumberInArray() {
+        int[] array = {2, 6, 8, 10, 4};
+        assertFalse(CreateArray.findNumberInArray(array, 0));
+        assertTrue(CreateArray.findNumberInArray(array, 4));
+        assertFalse(CreateArray.findNumberInArray(array, 7));
     }
 }
