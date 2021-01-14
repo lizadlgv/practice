@@ -1,5 +1,7 @@
 package ru.ssau.tk.lizadlgv.practice.arrays;
 
+import java.util.Arrays;
+
 public class CreateArray {
     static int[] createArray(int n) {
         return new int[n];
@@ -171,5 +173,14 @@ public class CreateArray {
             }
         }
         return count;
+    }
+
+    static Integer getMax(int[] array) {
+        if (array.length == 0) {
+            return null;
+        } else {
+            Arrays.sort(array);
+            return array[array.length - 1];
+        }
     }
 }
