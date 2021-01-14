@@ -86,4 +86,11 @@ public class CreateArrayTest {
         assertEquals(CreateArray.getMirror(6), new int[]{1, 2, 3, 3, 2, 1});
         assertEquals(CreateArray.getMirror(7), new int[]{1, 2, 3, 4, 3, 2, 1});
     }
+
+    @Test
+    public void testChangeSign() {
+        int[] array = {0, 564, -1159};
+        CreateArray.changeSign(array);
+        assertEquals(array, new int[]{0, -564, 1159});
+    }
 }
