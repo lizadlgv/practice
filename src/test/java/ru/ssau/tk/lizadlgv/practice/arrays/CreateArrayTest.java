@@ -101,4 +101,12 @@ public class CreateArrayTest {
         assertTrue(CreateArray.findNumberInArray(array, 4));
         assertFalse(CreateArray.findNumberInArray(array, 7));
     }
+
+    @Test
+    public void testFindNullInArray() {
+        Integer[] array = new Integer[]{2, 5, 6, null};
+        Integer[] array2 = new Integer[]{2, 5, 6};
+        assertTrue(CreateArray.findNullInArray(array));
+        assertFalse(CreateArray.findNullInArray(array2));
+    }
 }
