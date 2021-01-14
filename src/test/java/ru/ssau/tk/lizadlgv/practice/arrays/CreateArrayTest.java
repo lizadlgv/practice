@@ -142,4 +142,14 @@ public class CreateArrayTest {
         assertTrue(CreateArray.whoBestDivider(array1));
         assertFalse(CreateArray.whoBestDivider(array2));
     }
+
+    @Test
+    public void testFindMostEntryElement() {
+        int[] array1 = {1, 1, 1, 2, 3, 3, 3, 4, 7, 6, 5};
+        assertEquals(CreateArray.findMostEntryElement(array1), 1);
+        int[] array2 = {1, 2, 3, 4, 5, 11, 47, 89, 5, 32, 5, 4};
+        assertEquals(CreateArray.findMostEntryElement(array2), 4);
+        int[] array3 = {0, -2, 3, 0, -5, 0, -4, 6, 0, 6};
+        assertEquals(CreateArray.findMostEntryElement(array3), 0);
+    }
 }
