@@ -209,4 +209,10 @@ public class CreateArrayTest {
         int[] array1 = {4, 6, 6, 1};
         assertEquals(CreateArray.findEvenNumbers(array1), new boolean[]{true, true, true, false});
     }
+
+    @Test
+    public void testLongToInt() {
+        assertEquals(CreateArray.intToLong(CreateArray.longToInt(65L)), 65L);
+        assertEquals(CreateArray.longToInt(CreateArray.intToLong(new int[]{1615, 5})), new int[]{1615, 5});
+    }
 }
