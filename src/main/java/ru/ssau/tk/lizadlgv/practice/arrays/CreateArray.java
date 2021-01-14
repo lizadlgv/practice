@@ -183,4 +183,12 @@ public class CreateArray {
             return array[array.length - 1];
         }
     }
+
+    static int sumForEvenIndex(int[] array) {
+        int sum = 0;
+        for (int i = 0; i < array.length; i = i + 2) {
+            sum = sum + array[i];
+        }
+        return sum;
+    }
 }

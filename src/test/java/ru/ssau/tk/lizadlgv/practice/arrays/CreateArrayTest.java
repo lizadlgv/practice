@@ -128,4 +128,10 @@ public class CreateArrayTest {
         assertEquals(CreateArray.getMax(array2), (Integer) 5);
         assertNull(CreateArray.getMax(new int[]{}));
     }
+
+    @Test
+    public void testSumForEvenIndex() {
+        int[] array = {2, -6, 10, -14};
+        assertEquals(CreateArray.sumForEvenIndex(array), 12);
+    }
 }
