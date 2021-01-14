@@ -256,4 +256,12 @@ public class CreateArray {
             array[i] = ~array[i];
         }
     }
+
+    static int[] applyBitNotNewArray(int[] array) {
+        int[] arrayBitNot = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            arrayBitNot[i] = ~array[i];
+        }
+        return arrayBitNot;
+    }
 }

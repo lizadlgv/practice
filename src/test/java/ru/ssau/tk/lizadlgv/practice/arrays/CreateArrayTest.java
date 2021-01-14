@@ -184,4 +184,17 @@ public class CreateArrayTest {
         assertEquals(array[0], 254);
         assertEquals(array[1], 32);
     }
+
+    @Test
+    public void testApplyBitNotNewArray() {
+        int[] array = {254, 32};
+        int[] arrayBitNot = CreateArray.applyBitNotNewArray(array);
+        assertEquals(arrayBitNot[0], ~254);
+        assertEquals(arrayBitNot[1], ~32);
+        assertEquals(array[0], 254);
+        assertEquals(array[1], 32);
+        arrayBitNot = CreateArray.applyBitNotNewArray(arrayBitNot);
+        assertEquals(arrayBitNot[0], 254);
+        assertEquals(arrayBitNot[1], 32);
+    }
 }
