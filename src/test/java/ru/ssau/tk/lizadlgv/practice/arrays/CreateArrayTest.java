@@ -152,4 +152,12 @@ public class CreateArrayTest {
         int[] array3 = {0, -2, 3, 0, -5, 0, -4, 6, 0, 6};
         assertEquals(CreateArray.findMostEntryElement(array3), 0);
     }
+
+    @Test
+    public void testGetIndexOfNumber() {
+        int[] array = {2, -6, 8, 2};
+        assertEquals(CreateArray.getIndexOfNumber(array, 2), 0);
+        assertEquals(CreateArray.getIndexOfNumber(array, 8), 2);
+        assertEquals(CreateArray.getIndexOfNumber(array, 10), -1);
+    }
 }
