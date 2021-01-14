@@ -77,7 +77,13 @@ public class CreateArrayTest {
 
     @Test
     public void testGetDividersOfNumbers() {
-        assertEquals(CreateArray.getDividersOfNumbers(6),  new double[]{1, 2, 3, 6});
-        assertEquals(CreateArray.getDividersOfNumbers(7),  new double[]{1, 7});
+        assertEquals(CreateArray.getDividersOfNumbers(6), new double[]{1, 2, 3, 6});
+        assertEquals(CreateArray.getDividersOfNumbers(7), new double[]{1, 7});
+    }
+
+    @Test
+    public void testGetMirror() {
+        assertEquals(CreateArray.getMirror(6), new int[]{1, 2, 3, 3, 2, 1});
+        assertEquals(CreateArray.getMirror(7), new int[]{1, 2, 3, 4, 3, 2, 1});
     }
 }
