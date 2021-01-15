@@ -21,4 +21,9 @@ public class MyString {
         System.out.println(s2 == s1);
         System.out.println(s1.equals(s2));
     }
+
+    static boolean checkPalindrome(String myString) {
+        String palindrome = new StringBuilder(myString).reverse().toString();
+        return myString.equals(palindrome);
+    }
 }
