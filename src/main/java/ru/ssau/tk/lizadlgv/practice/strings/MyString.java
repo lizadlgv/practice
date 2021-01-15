@@ -13,4 +13,12 @@ public class MyString {
             System.out.println(bytes);
         }
     }
+
+    static void checkingStrings() {
+        String s1 = "S";
+        String s2 = new String(s1);
+
+        System.out.println(s2 == s1);
+        System.out.println(s1.equals(s2));
+    }
 }
