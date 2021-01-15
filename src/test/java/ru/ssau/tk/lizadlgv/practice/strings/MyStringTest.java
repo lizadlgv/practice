@@ -2,8 +2,7 @@ package ru.ssau.tk.lizadlgv.practice.strings;
 
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 public class MyStringTest {
     @Test
@@ -13,5 +12,12 @@ public class MyStringTest {
         assertTrue(MyString.checkPalindrome("арозаупаланалапуазора"));
         assertFalse(MyString.checkPalindrome("каток"));
         assertTrue(MyString.checkPalindrome("12345K54321"));
+    }
+
+    @Test
+    public void testFindFirstInSecond() {
+        assertEquals(MyString.findFirstInSecond("ca", "abcaca"), 2);
+        assertEquals(MyString.findFirstInSecond("кот", "токикот"), 4);
+        assertEquals(MyString.findFirstInSecond("qwer", "tr"), -1);
     }
 }
